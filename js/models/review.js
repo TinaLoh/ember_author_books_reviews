@@ -1,7 +1,7 @@
 App.Review = DS.Model.extend({
   userName: DS.attr("string"),
   text: DS.attr("string"),
-  book: DS.belongsTo("book")
+  book: DS.attr("number")
 })
 
 

@@ -32,6 +32,7 @@
       <li>{{#link-to "authors.show" author}}{{author.name}}{{/link-to}}</li>
       {{/each}}
     </ul>
+    {{outlet}}
   </script>
 
   <script type="text/x-handlebars" id="authors/show">
@@ -44,10 +45,16 @@
 
 
   <script type="text/x-handlebars" id="books">
-    <h2>This is Books Page</h2>
+    <center><h2>This is Books Page</h2></center>
     <ul>
       {{#each book in model}}
-      <li>{{book.title}} : {{book.amazonLink}}</li>
+      <h5>Title: {{book.title}}</h5>
+      <img class="book-photo" {{bind-attr src=book.image}}>
+      <h5>amazonURL: {{book.amazonLink}}</h5>
+      <h5>Genre: {{book.genre}}</h5>
+      <h5>Year: {{book.year}}</h5>
+      <h5>Author: {{book.author}}</h5>
+      <h5>Reviews: {{book.reviews}}</h5>
       {{/each}}
     </ul>
   </script>

@@ -2,3 +2,8 @@
 .ember-application {
     margin: 20px;
 }
+
+.book-photo {
+  width: 150px;
+  height: 150px;
+}

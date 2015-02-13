@@ -4,8 +4,8 @@ App.Book = DS.Model.extend({
   amazonLink: DS.attr("string"),
   genre: DS.attr("string"),
   year: DS.attr("string"),
-  author: DS.belongsTo("author"),
-  reviews: DS.hasMany("review", {async: true})
+  author: DS.attr("string"),
+  reviews: DS.attr("number")
 })
 
 
