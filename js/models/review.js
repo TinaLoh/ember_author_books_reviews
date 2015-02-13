@@ -1,8 +1,8 @@
 App.Review = DS.Model.extend({
   userName: DS.attr("string"),
   text: DS.attr("string"),
-  book: DS.attr("number")
-})
+  book: DS.belongsTo("book", { async: true}),
+});
 
 
 App.Review.FIXTURES = [
